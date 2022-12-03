@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+    height: 100px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 12px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orangered;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.button{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.button:hover{
+    border: 1px solid orangered;
+    background: orangered;
+    transition: 1s;
+}
+
+@media screen and (max-width: 700px){
+    .nav-links ul li{
+        margin: 1px;
+        list-style: none;
+        display: inline-flex;
+        flex-direction: row;
+        padding: 12px 12px;
+        top: 0;
+    }
+    .nav-links ul li a{
+        font-size: 10px;
+    }
+}
+
+.sub-head{
+    height: 100vh;
+    width: 100%; 
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/order.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+/*tampilkan*/
+
+.table-section{
+    margin-top: 20px;
+    height: 650px;
+    overflow: auto;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 1000px;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: #f6f9fc;
+    color: #8493a5;
+    font-size: 15px;
+}
+
+th, td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+button{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    color: lightseagreen;
+}
+
+button a{
+    text-decoration: none;
+}
+
+td button:nth-child(1){
+    background-color: red;
+}
+td button:nth-child(2){
+    background-color: #0298cf;
+}
+
+#search-bar{
+    color: #8493a5;
+    width: 40%;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #3c3a3a30;
+}
